@@ -1,0 +1,67 @@
+/*!
+Theme Name: villarly
+Theme URI: https://www.getin.agency/
+Author: GET IN Agency
+Author URI: https://www.getin.agency/
+Description: Creative custom wp-theme. But good.
+Version: 1.0
+Text Domain: _turbo
+!*/
+
+
+@import "./scss/abstract/variables";
+@import "./scss/abstract/mixins";
+
+@import "./scss/vendors/breakpoints";
+@import "./scss/vendors/normalize"; 
+//@import "./scss/vendors/owlcarousel"; 
+//@import "./scss/vendors/aos/aos"; 
+//@import "./scss/vendors/wpml/legacy-dropdown"; 
+//@import "./scss/vendors/wpml/legacy-dropdown-click"; 
+//@import "./scss/vendors/wpml/legacy-list-horizontal"; 
+//@import "./scss/vendors/wpml/legacy-list-vertical"; 
+//@import "./scss/vendors/wpml/legacy-post-translations"; 
+//@import "./scss/vendors/wpml/menu-item"; 
+
+@import "./scss/base/scaffolding";
+@import "./scss/base/typography";
+@import "./scss/base/links-buttons";
+@import "./scss/base/forms";
+@import "./scss/base/tables";
+@import "./scss/base/wp";
+
+@import "./scss/layout/masthead";
+@import "./scss/layout/main-navigation";
+@import "./scss/layout/main";
+@import "./scss/layout/colophon";
+//@import "./scss/layout/footer-navigations";
+//@import "./scss/layout/sidebars";
+//@import "./scss/layout/sticky-navigation";
+
+//@import "./scss/modules/owlcarousel";
+//@import "./scss/modules/popup";
+
+@import "./scss/modules/cookiebanner";
+//@import "./scss/modules/wpml";
+//@import "./scss/modules/card-slider";
+
+//@import "./scss/modules/wpml";
+
+// Start WooCommerce
+/* @import "./scss/modules/woocommerce/woocommerce-layout";
+
+@include mappy-bp(max-width screen-sm) {
+	@import "./scss/modules/woocommerce/woocommerce-smallscreen";
+}
+
+@import "./scss/modules/woocommerce/woocommerce"; */
+// End WooCommerce
+
+
+@import "./scss/page-templates/homepage";
+//@import "./scss/page-templates/contact";
+@import "./scss/page-templates/error-404";
+
+@import "./scss/post-types/post";
+
+@import "./scss/print/print";

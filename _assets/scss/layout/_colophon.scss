@@ -1,0 +1,49 @@
+#colophon {
+	background-color: $colophon-bg-color;
+	color: $colophon-text-color;
+	font-size: 0.8em;
+	padding: 1em 0;
+	text-align: center;
+	
+	@include mappy-bp(screen-sm) {
+		text-align: left;	
+	}
+
+	.site-info {
+		@include container();
+		
+		@include mappy-bp(screen-sm) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;	
+		}
+
+		> div {
+			margin: 0 0 1em;
+
+			@include mappy-bp(screen-sm) {
+				margin: 0;	
+			}
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: $colophon-link-color;
+		font-size: inherit;
+
+		&:hover {
+			color: $colophon-link-hover-color;
+		}
+	}
+
+	.made-by {
+		a {
+			@include text-hide();
+			@include getin-sign(white);
+		}
+	}
+}

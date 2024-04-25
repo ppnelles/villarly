@@ -1,0 +1,34 @@
+.owl-loaded {
+  position: relative;
+}
+
+.owl-stage-outer {
+  overflow: hidden;
+}
+
+.owl-stage {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.owl-dots {
+  //text-align: center;
+}
+
+.owl-nav {
+  button {
+    background-color: $owl-button-background;
+  }
+}
+
+.owl-dot {
+  width: $owl-dot-size;
+  height: $owl-dot-size;
+  padding: 0;
+  border-radius: $owl-dot-size;
+  background-color: transparent;
+  border: 1px solid $owl-button-background;
+  margin: $owl-dot-spacing;
+
+}

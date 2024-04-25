@@ -1,0 +1,100 @@
+:root {
+  accent-color: $c-primary;
+}
+
+:focus-visible { 
+  outline-color: $c-primary;
+}
+
+::marker { 
+  color: $c-primary; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea,
+select,
+textarea {
+	display: block;
+	width: 100%;
+	color: $form-text-color;
+	border: 1px solid $form-border-color;
+	border-radius: 3px;
+	padding: 3px;
+	padding: 0.5em;
+	margin: 0.25em 0 0;
+}
+
+input[type="radio"],
+input[type="checkout"] {
+	block-size: $form-elem-size;
+	inline-size: $form-elem-size;
+}
+
+label {
+	display: block;	
+	margin: 0 0 0.25em;
+}
+
+form {
+	> div {
+		margin: 0 0 1em;
+	}
+}
+
+textarea {
+	resize: vertical;
+}
+
+details {
+	margin: 0 0 0.5em;
+}
+
+summary {
+  background-color: $summary-bg-color;
+  color: $summary-text-color;
+  padding: 0.25em 0.5em;
+  
+  &::marker {
+    color: $summary-text-color;
+  }
+}
+
+span.wpcf7-form-control-wrap {
+	display: block;
+}
+
+span.wpcf7-not-valid-tip {
+	font-size: 90%;
+	font-family: $f-quote;
+	font-style: italic;
+	color: $c-error;
+	padding: 0.25em 0 0;
+}
+
+span.wpcf7-list-item {
+	margin: 0;
+}
+
+div.wpcf7-validation-errors, 
+div.wpcf7-acceptance-missing {
+	border-color: $c-warning;
+}
+
+//honeypot
+.getin-form {
+	display: none;
+}

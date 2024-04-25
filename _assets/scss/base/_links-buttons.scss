@@ -1,0 +1,26 @@
+a {
+	background-color: transparent;
+	color: $c-link;
+	text-decoration: underline;
+
+	&:hover {
+		color: darken($c-link, 20%);
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+
+	img {
+		border: none;
+	}
+}
+
+a.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	@include btn();	
+}

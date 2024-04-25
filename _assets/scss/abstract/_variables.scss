@@ -1,0 +1,145 @@
+/* 
+* Mappy Breakpoints
+* Its better to use them in EM, so this mixin will convert px to em. 
+*
+* https://zellwk.com/blog/mappy-breakpoints/
+* https://github.com/zellwk/mappy-breakpoints
+*
+*/
+
+$breakpoints: (
+    'screen-xs': 450px,
+    'screen-sm': 740px,
+    'screen-md': 980px,
+    'screen-lg': 1100px,
+    'screen-xl': 1300px,
+    'screen-xxl': 1600px,
+);
+
+/* 
+* Fonts Families
+*/
+
+$f-regular: Georgia, Times, "Times New Roman", serif;
+$f-title: Helvetica, Arial, Verdana, sans-serif;
+$f-quote: Georgia, Times, "Times New Roman", serif;
+$f-light: Georgia, Times, "Times New Roman", serif;
+
+/*
+* Base Colors
+*/
+
+$red: #e43d3d;
+$green: #50d37d;
+$dark-green: #117e36;
+$orange: #fe8641;
+$yellow: #ffb516;
+$blue: #4285ff;
+$black: #0a0908;
+$grey-light: #e1e1e1;
+
+$c-primary: $green;
+$c-secondary: $orange;
+$c-action: $red;
+$c-link: $blue;
+$c-link_hover: $orange;
+
+$c-text: #404040;
+$c-text_light: #b7b7b7;
+$c-text_dark: $black;
+$c-title: $black;
+
+$c-border: $grey-light;
+
+$c-background_body: #ffffff;
+$c-background_light: #f1f1f1;
+$c-background_colored: #009ddf;
+$c-background_dark: #333333;
+
+$c-table-border: $grey-light;
+$c-table-border_light: white;
+$c-table-border_dark: $c-background_dark;
+
+$c-success: $green;
+$c-warning: $orange;
+$c-error: $red;
+
+$c-linkedin: #007ab9;
+$c-twitter: #55acee;
+$c-facebook: #3b5999;
+$c-vimeo: #1ab7ea;
+$c-youtube: #cd201f;
+$c-instagram: #e4405f;
+$c-pinterest: #bd081c;
+
+/*
+* scaffolding
+*/
+
+$container-max-width: 1800px;
+
+/*
+* Forms
+*/
+
+$form-text-color: $c-text;
+$form-border-color: $c-border;
+$form-elem-size: 1rem;
+$summary-bg-color: $c-primary;
+$summary-text-color: white;
+
+/*
+* $masthead
+*/
+$masthead-height: 110px;
+$masthead-bgcolor: white;
+
+/*
+* $hero
+*/
+$hero-height: 100vh;
+
+/* 
+* main_navigations
+*/ 
+
+$main-nav-submenu-bg: $c-background_light;
+$main-nav-link-color: $c-text;
+$main-nav-link-hover-color: $c-link_hover;
+$main-nav-active-color: $c-link;
+
+/* 
+* colophon
+*/ 
+
+$colophon-bg-color: $c-background_dark;
+$colophon-text-color: #fff;
+$colophon-link-color: #fff;
+$colophon-link-hover-color: #fefefe;
+
+/*
+* GDPR
+*/
+
+$cookiebanner-bg: $c-background_dark;
+$cookiebanner-color: white;
+$cookiebanner-button-bg: $c-primary;
+$cookiebanner-button-color: white;
+
+/* 
+* wpml
+*/ 
+$wpml-min-width: 115px;
+$wpml-border-color: $c-text;
+$wpml-link-color: $c-text;
+$wpml-link-color-hover: $c-text;
+$wpml-background-color: transparent;
+$wpml-background-color-hover: $c-primary;
+
+/* 
+* owl-carousel
+*/ 
+
+$owl-button-background: $c-action;
+$owl-dot-size: 15px;
+$owl-dot-spacing: 0 0.5em 0 0;

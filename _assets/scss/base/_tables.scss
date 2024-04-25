@@ -1,0 +1,21 @@
+table {
+	margin: 1em 0;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+
+	th,
+	td {
+		padding: 1em;
+		vertical-align: top;
+		border-top: 1px solid $c-table-border;
+	}
+
+	thead {
+		th {
+	    	vertical-align: bottom;
+	    	border-top: 0;
+	    	border-bottom: 3px solid $c-table-border;
+	    }
+	}
+}

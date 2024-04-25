@@ -1,0 +1,178 @@
+#popup {
+
+	&.hidden {
+		display: none !important;
+	}
+
+	button {
+		&:before {
+			display: none;
+		}
+	}
+
+	button.popup-close {
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		padding: 0;
+		text-align: center;
+		position: absolute;
+		top: -44px;
+		right: -10px;
+		z-index: 2;
+		
+		span {
+			line-height: 20px;
+			font-family: $f-title;
+			font-weight: 700;
+			position: relative;
+			left: 1px;
+		}
+	}
+
+	.popup-bg {
+		position: fixed;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,0.6);
+	}
+
+	.popup-content {
+		position: relative;
+		z-index: 2;
+	}
+
+}
+
+#popup {
+	position: fixed;
+	z-index: 100;
+
+	h2 {
+		margin: 0 0 0.5em;
+	}
+
+
+	.pop-inner {
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: white;
+			text-decoration: underline;
+		}
+	}
+
+
+	&.bubble {
+		bottom: 1em;
+		right: 1.5em;
+		background-color: rgba(0,0,0,0.9);
+		width: calc(100% - 3em);
+		max-width: 400px;
+		padding: 1em;
+		font-size: 80%;
+		color: white;
+		margin: 0 0 0 calc(1em + 14px);
+	
+		h2 {
+			color: white;
+			font-size: 21px;
+		}
+
+		.popup-close {
+			top: -60px;
+			right: -27px;
+		}
+
+		.cta-elloha {
+			text-align: center;
+			margin: 1em 0 0;
+		}
+
+	}
+
+	&.fullscreen {
+		width: 100%;
+		height: 100vh;
+		overflow: auto;
+		top: 0;
+		left: 0;
+
+		@include mappy-bp(screen-md) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.popup-content {
+			width: 90%;
+			max-width: 800px;
+			margin: 2em auto;
+			padding: 1em;
+			background-color: white;
+
+			@include mappy-bp(screen-sm) {
+				padding: 2em;	
+			}
+
+			@include mappy-bp(screen-md) {
+			//	padding: 4em;	
+			}
+		}
+
+		
+		.cta {
+			text-align: center;
+			margin: 1em 0 0;
+		}
+	}
+
+	/* &.fullscreen,
+	&.bubble {	
+	}
+	 */
+}
+
+/* section.news {
+	//width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+figure {
+		width: 25%;
+	}
+
+	.content {
+		width: 70%;
+	}
+
+
+
+
+
+	body.scroll-down &,
+	body.scroll-up & {
+
+		right: calc(1em + 14px);
+
+		figure {
+			width: 100%;
+			max-width: 100px;
+		}
+
+		.content {
+			display: none;
+		}
+
+		&:hover {
+			.content {
+				display: block;
+			}
+		}
+
+	}
+	} */

@@ -1,0 +1,63 @@
+@mixin btn() {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 0.9em;
+	background-color: $c-link;
+	color: white;
+	border: none;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	transition: all 200ms ease-in-out;
+	cursor: pointer;
+
+	&:hover {
+		color: white;
+		background-color: $c-link_hover;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+}
+
+@mixin container() {
+	width: 90%;
+	max-width: 1800px;
+	margin: 0 auto;
+}
+
+@mixin reset-list() {
+	margin: 0;
+	padding: 0;
+	
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+@mixin text-hide() {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 0;
+}
+
+@mixin getin-sign($format: white) {
+	display: inline-block;
+	width: 52px;
+	height: 15px;
+	background: transparent url('img/signatures/getin-#{$format}.svg') 0 0 no-repeat;
+	background-size: contain;
+
+	span {
+		display: none;
+	}
+}
+
+@mixin transition-default($prop: all) {
+	transition: $prop 150ms ease-out;
+}

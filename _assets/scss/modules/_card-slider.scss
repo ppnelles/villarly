@@ -1,0 +1,64 @@
+.card-slider {
+	width: 90%;
+	margin: 3em auto 0;
+	overflow: hidden;
+	
+	@include mappy-bp(screen-sm) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	header {
+		@include mappy-bp(screen-sm) {
+			flex: 1 1 25%;
+		    padding: 0 1.5em 0 0;
+		}
+	}
+
+	.inner {
+		overflow: hidden;
+
+		@include mappy-bp(screen-sm) {
+			flex-wrap: wrap;
+			flex: 1 1 75%;
+		}
+
+	}
+
+	ul {
+		@include reset-list();
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+	    transition: left 200ms ease;
+		left: 0;
+
+		li {
+			position: relative;
+		    flex: 1 0 250px;
+		    vertical-align: top;
+		    box-sizing: border-box;
+    		white-space: normal;
+    		padding: 0 1.5em 0 0;
+
+    		@include mappy-bp(screen-md) {
+    			//flex-basis: 25%;	
+    		}
+    	}
+	}
+
+	.slider-nav {
+		width: 100%;
+		overflow: hidden;
+
+		.disabled {
+			opacity: 0.4;
+		}
+	}
+
+	.slide-next {
+		float: right;
+	}
+}

@@ -1,0 +1,185 @@
+.main-navigation {
+	clear: both;
+	display: block;
+	//float: left;
+	width: 100%;
+
+	@include mappy-bp(screen-md) {
+	    display: flex;
+	    flex-direction: column;
+	    text-align: right;
+	    justify-content: flex-end; 
+	    margin: 0;
+	}
+
+	.nav-inner {
+		padding: 2em 0;
+		text-align: center;
+
+		@include mappy-bp(screen-md) {
+			padding: 0;
+			text-align: left;
+			display: flex;
+			align-items: flex-end;
+			flex-direction: column-reverse;
+		}
+	}
+
+	ul {
+		@include reset-list();
+	}
+
+	ul ul {
+		background-color: $main-nav-submenu-bg;
+		margin: 0 0 0 0.5em;
+
+		@include mappy-bp(screen-md) {
+			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+			margin: 0;
+		}
+	}
+
+	ul ul ul {
+		@include mappy-bp(screen-md) {
+			left: -999em;
+			top: 0;
+		}
+	}
+
+	ul ul li:hover > ul,
+	ul ul li.focus > ul {
+		left: 100%;
+	}
+
+	ul ul a {
+		width: 200px;
+	}
+
+	ul li:hover > ul,
+	ul li.focus > ul {
+		left: auto;
+	}
+
+	ul li {
+		@include mappy-bp(screen-md) {
+		  display: inline-block;
+		  position: relative;
+		}
+	}
+
+	a {
+		display: block;
+		padding: 0 0.25em;
+		color: $main-nav-link-color;
+		text-decoration: none;
+
+		&:hover {
+			color: $main-nav-link-hover-color;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}
+
+	.current-menu-item > a {
+		color: $main-nav-active-color;
+	}
+}
+
+.menu-toggle {
+	position: absolute;
+	top: 1.5em;
+	right: 2.5%;
+	display: inline-block;
+	width: auto;
+	background-color: transparent;
+	border: none;
+	padding: 1em;
+
+	&:before {
+		display: none;
+	}
+
+	&:hover {
+		background-color: transparent;
+	}
+
+	.label {
+		display: none;
+	}
+
+	.burger-line {
+		display: block;
+		width: 37px;
+		height: 3px;
+		background-color: $c-link;
+
+		&:nth-child(3) {
+			margin: 5px 0;
+		}
+	}
+
+
+	&:hover {
+		.burger-line {
+			//background-color: white;
+		}
+	}
+
+
+  @include mappy-bp(screen-md) {
+    display: none; 
+  }
+}
+
+.main-navigation {
+	.nav-inner {
+		display: none;
+
+		@include mappy-bp(screen-md) {
+		  display: flex; 
+		}
+
+	}
+
+	&.toggled {
+		.nav-inner {
+			display: block;
+
+			@include mappy-bp(screen-md) {
+				display: flex;
+			}
+		}
+	}
+}
+
+.secondary-menu {
+	@include mappy-bp(screen-md) {
+	    display: flex;
+	    justify-content: flex-end; 
+	    align-items: center;
+	   // margin: 0.5em 0 1em;
+	}
+
+	a {
+		@include mappy-bp(screen-md) {
+			font-size: 90%;
+			//text-transform: none;
+			//padding: 0;
+		}
+	}
+
+	> * {
+		@include mappy-bp(screen-md) {
+			margin: 0 0.5em 0 0;
+		}
+	}
+
+}

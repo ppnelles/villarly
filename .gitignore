@@ -1,0 +1,47 @@
+#Dev files & folders
+/logs/
+/node_modules/
+
+# Don’t ignore themes dir, but ignore everything inside except turbo
+!/themes
+/themes/*
+!/themes/villarly
+
+# Don’t ignore plugins dir, but ignore everything inside except custom plugins
+!/plugins
+/plugins/*
+!/mu-plugins
+/mu-plugins/*
+!/plugins/villarly
+
+#wp-files
+/index.php
+/backup/*
+/languages/*
+/cache/*
+/upgrade/*
+/wflogs/*
+/sitemap.*
+/blogs.dir/
+
+#wp-uploads
+/uploads/*
+
+#cache
+/advanced-cache.php
+/db.php
+/object-cache.php
+/cache/
+/w3tc-config/
+
+
+# Hidden system files
+.DS_Store
+.DS_Store?
+.localized
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+*.log

@@ -1,0 +1,36 @@
+section.error-404 {
+	padding: 6em;
+
+	.inner {
+		@include container();
+	}
+
+	.content {
+		@include mappy-bp(screen-sm) {
+			display: flex;
+			justify-content: space-between;
+			//align-items: flex-start;	
+			align-items: center;
+		}
+
+		> div {
+			text-align: center;
+			width: 100%;
+			// @include mappy-bp(screen-sm) {
+			// 	width: 50%;	
+			// }
+		}
+
+		// > figure {
+		// 	@include mappy-bp(screen-sm) {
+		// 		width: 40%;	
+		// 	}
+		// }
+	}
+
+	.cta {
+		a {
+			margin-right: 1em;
+		}
+	}
+}

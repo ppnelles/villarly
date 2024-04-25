@@ -1,0 +1,129 @@
+.page-template-homepage {
+
+	/*.slider-hero,
+	.fixed-hero {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+
+		@include mappy-bp(screen-md) {
+			padding: 0;	
+			height: calc(#{$hero-height} - #{$masthead-height});
+		}
+
+		.admin-bar & {
+			@include mappy-bp(screen-md) {
+				height: calc(#{$hero-height} - #{$masthead-height} - 20px);
+			}
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.owl-stage {
+			display: flex;
+			flex-wrap: wrap;
+			overflow: hidden;
+			
+		}
+
+		.owl-item {
+			height: 100%;
+			position: relative;
+
+		
+			@include mappy-bp(screen-md) {
+				height: calc(#{$hero-height} - #{$masthead-height});
+			}
+			
+			.admin-bar & {
+				@include mappy-bp(screen-md) {
+					height: calc(#{$hero-height} - #{$masthead-height} - 20px);	
+				}
+			}
+
+		}
+
+		.owl-nav {
+			button {
+				@include transition-default();
+				background-color: transparent;
+				color: white;
+				position: absolute;
+				z-index: 20;
+				font-size: 300%;
+				padding: 0;
+				opacity: 0.5;
+				bottom: calc(50% - 30px);
+
+				@include mappy-bp(screen-md) {
+					bottom: 2.5em;
+				}
+
+				&:hover {
+					opacity: 1;
+				}
+
+				&.owl-prev {
+					left: 2%;
+				}
+
+				&.owl-next {
+					right: 2%;
+				}
+			}
+		}
+
+		.hero-image {
+			@include mappy-bp(screen-md) {
+				display: none;	
+			} 
+		}
+
+		.hero-bg {
+			display: none;
+
+	 		@include mappy-bp(screen-md) {
+				display: block;
+				position: absolute;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-size: cover;
+				background-position: center center;
+			} 
+		}
+
+		.hero-title {
+			font-family: $f-title;
+			font-size: calc(1.5rem + 1.1vw);
+			line-height: 1.2;
+			font-weight: 900;
+			text-transform: uppercase;
+			color: $c-text;
+			text-align: center;
+			padding: 1em 0;
+
+			@include mappy-bp(screen-sm) {
+				position: absolute;
+				width: 100%;
+				top: 0;
+				left: 0;
+				z-index: 10;
+				margin: 1.5em 0 0;
+				text-align: left;
+				padding: 0;
+			}
+
+			.inner {
+				@include container();
+			}
+		}
+	}*/
+
+}

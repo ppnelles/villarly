@@ -1,0 +1,26 @@
+.main-navigation .wpml-ls-legacy-dropdown {
+	display: inline-block;
+	width: auto;
+	min-width: $wpml-min-width;	
+	text-align: left;
+
+	a {
+		width: $wpml-min-width;
+		background-color: $wpml-background-color;
+		color: $wpml-link-color;
+		padding: 5px;
+		border: none;
+
+		&:hover {
+			background-color: $wpml-background-color-hover;
+			color: $wpml-link-color-hover;
+		}
+	}
+	
+	.wpml-ls-current-language:hover > a, 
+	.wpml-ls-legacy-dropdown a:focus, 
+	.wpml-ls-legacy-dropdown a:hover {
+		background-color: $wpml-background-color;
+		color: $wpml-link-color;
+	}
+}
