@@ -4,31 +4,29 @@
   background-color: $masthead-bgcolor;
 
   .inner {
-    @include container();
     position: relative;
-    margin: 0.5em auto 0;
-
-    @include mappy-bp(screen-md) {
+    margin: 0 2.5%;
+    padding: 1em 0;
     	display: flex;
     	align-items: center;
-    }
   }
 
   .site-branding {
     display: flex;
-    margin: 0 0 0.5em
+    margin: 0;
   }
 
   .site-title {
     @include transition-default();
   	display: inline-block;
   	margin: 0;
-    width: 120px;
-    height: 120px;
-  	background: transparent url('img/awesome-logo.svg') 0 0 no-repeat;
+    width: 140px;
+    height: 26px;
+  	background: transparent url('img/villarly-hb-noir.svg') 0 0 no-repeat;
   	position: relative;
   	z-index: 2;
 
+    opacity: 0;
 
   	a {
  	 	@include text-hide();

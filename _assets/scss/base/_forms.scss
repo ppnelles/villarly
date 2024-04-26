@@ -10,6 +10,10 @@
   color: $c-primary; 
 }
 
+::placeholder {
+  color: $black;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -31,8 +35,8 @@ textarea {
 	display: block;
 	width: 100%;
 	color: $form-text-color;
-	border: 1px solid $form-border-color;
-	border-radius: 3px;
+	border: 1px solid white;
+	border-radius: 0px;
 	padding: 3px;
 	padding: 0.5em;
 	margin: 0.25em 0 0;

@@ -36,7 +36,7 @@ Text Domain: _turbo
 @import "./scss/layout/colophon";
 //@import "./scss/layout/footer-navigations";
 //@import "./scss/layout/sidebars";
-//@import "./scss/layout/sticky-navigation";
+@import "./scss/layout/sticky-navigation";
 
 //@import "./scss/modules/owlcarousel";
 //@import "./scss/modules/popup";
@@ -59,7 +59,7 @@ Text Domain: _turbo
 
 
 @import "./scss/page-templates/homepage";
-//@import "./scss/page-templates/contact";
+@import "./scss/page-templates/gdpr";
 @import "./scss/page-templates/error-404";
 
 @import "./scss/post-types/post";

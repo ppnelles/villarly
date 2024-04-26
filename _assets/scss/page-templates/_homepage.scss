@@ -1,129 +1,473 @@
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
 .page-template-homepage {
 
-	/*.slider-hero,
-	.fixed-hero {
-		width: 100%;
-		overflow: hidden;
-		position: relative;
+	section {
+		.inner {
+			@include container();
+			padding: 2em 0;
 
-		@include mappy-bp(screen-md) {
-			padding: 0;	
-			height: calc(#{$hero-height} - #{$masthead-height});
+			@include mappy-bp(screen-md) {
+				padding: 4em 0;	
+			}
+
+			@include mappy-bp(screen-xl) {
+				padding: 6em 0;	
+			}
+		}
+	}
+
+	#showreel {
+	  text-align: center;
+	  width: 100%;
+	  height: 90vh;
+	  overflow: hidden;
+	  text-transform: uppercase;
+	  position: relative;
+	  margin: 0;
+
+	  video {
+	      display: block;
+	      width: 100%;
+	      height: 90vh;
+	      object-fit: cover;
+	      object-position: center center;
+	  }
+
+	  #showreel-intro-horizontal {
+	    @media screen and (orientation: portrait) {
+	      display: none;
+	    }
+	  }
+
+	  #showreel-intro-vertical {
+	    @media screen and (orientation: landscape) {
+	      display: none;
+	    }
+	  }
+
+	  .content {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+
+	    h1 {
+	    	display: none;
+	    }
+
+	    figure {
+	    	width: 80%;
+	    	max-width: 480px;
+
+	    	img {
+	    		display: block;
+	    	}
+	    }
+	  }
+
+	}
+
+
+	.scroll-down {
+	  display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	  position: absolute;
+	  bottom: 1%;
+	  left: 0;
+	  justify-content: center;
+
+	  .mouse {
+	    width: 3px;
+	    padding: 10px 15px;
+	    height: 35px;
+	    border: 1px solid #fff;
+	    border-radius: 25px;
+	    opacity: 0.75;
+	    box-sizing: content-box;
+	    margin: 0 auto 0.75em;
+	    transform: scale(75%);
+	    position: relative;
+	    top: 5px;
+	  }
+
+	  .scroller {
+	    width: 3px;
+	    height: 10px;
+	    border-radius: 25%;
+	    background-color: white;
+	    animation-name: scroll;
+	    animation-duration: 2.2s;
+	    animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+	    animation-iteration-count: infinite;
+	  }
+
+
+	  .label {
+	    display: none;
+	    text-transform: uppercase;
+	    letter-spacing: 3px;
+	    opacity: 0.7;
+	    font-size: 80%;
+	  }
+	}
+
+	#situation {
+		padding-bottom: 2em;
+
+		@include mappy-bp(screen-sm) {
+			padding-bottom: 0;	
 		}
 
-		.admin-bar & {
-			@include mappy-bp(screen-md) {
-				height: calc(#{$hero-height} - #{$masthead-height} - 20px);
+		.inner {
+			@include mappy-bp(screen-sm) {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;	
 			}
 		}
 
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
+		.content {
+			@include mappy-bp(screen-sm) {
+				width: 45%;
+			}
+
+			@include mappy-bp(screen-md) {
+				width: 40%;	
+			}
+
+			h2 {
+				margin-top: 0;
+			}
+
+			ul {
+				margin-left: 1em;
+			}
 		}
 
-		.owl-stage {
-			display: flex;
-			flex-wrap: wrap;
-			overflow: hidden;
-			
-		}
-
-		.owl-item {
-			height: 100%;
+		.map {
 			position: relative;
-
-		
-			@include mappy-bp(screen-md) {
-				height: calc(#{$hero-height} - #{$masthead-height});
-			}
 			
-			.admin-bar & {
-				@include mappy-bp(screen-md) {
-					height: calc(#{$hero-height} - #{$masthead-height} - 20px);	
-				}
+			@include mappy-bp(screen-sm) {
+				width: 45%;
 			}
 
-		}
-
-		.owl-nav {
-			button {
-				@include transition-default();
-				background-color: transparent;
-				color: white;
-				position: absolute;
-				z-index: 20;
-				font-size: 300%;
-				padding: 0;
-				opacity: 0.5;
-				bottom: calc(50% - 30px);
-
-				@include mappy-bp(screen-md) {
-					bottom: 2.5em;
-				}
-
-				&:hover {
-					opacity: 1;
-				}
-
-				&.owl-prev {
-					left: 2%;
-				}
-
-				&.owl-next {
-					right: 2%;
-				}
-			}
-		}
-
-		.hero-image {
 			@include mappy-bp(screen-md) {
-				display: none;	
-			} 
-		}
+				width: 50%;	
+			}
 
-		.hero-bg {
-			display: none;
-
-	 		@include mappy-bp(screen-md) {
+			&:after {
+				content: '';
 				display: block;
-				position: absolute;
-				z-index: 1;
-				top: 0;
-				left: 0;
 				width: 100%;
 				height: 100%;
-				background-size: cover;
-				background-position: center center;
-			} 
+				background-color: $black;
+				position: absolute;
+				bottom: -1.5em;
+				right: -1.5em;
+				z-index: 1;
+			}
+
+			iframe {
+				border: none;
+				display: block;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				position: relative;
+				z-index: 2;
+
+				max-height: 600px;
+				min-height: 80vh;
+
+				@include mappy-bp(screen-sm) {
+					min-height: 60vh;
+				}
+
+				 @include mappy-bp(screen-md) {
+				 	max-height: 800px;	
+				}
+
+			}
+		}
+	}
+
+	#appartements {
+		text-align: center;
+		background-color: $black;
+		color: white;
+		margin: 0;
+		padding: 2em 0 0;
+	}
+
+	#en-haut,
+	#en-bas {
+		.inner {
 		}
 
-		.hero-title {
-			font-family: $f-title;
-			font-size: calc(1.5rem + 1.1vw);
-			line-height: 1.2;
-			font-weight: 900;
-			text-transform: uppercase;
-			color: $c-text;
-			text-align: center;
-			padding: 1em 0;
+		.content {
+			@include mappy-bp(screen-sm) {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-around;	
+			}
+
+			figure {
+				width: 60%;
+				margin: 0 auto 2em;
+
+				@include mappy-bp(screen-sm) {
+					width: 30%;
+				}
+
+				@include mappy-bp(screen-xl) {
+					width: 25%;	
+				}
+			}
+
+			> div {
+				@include mappy-bp(screen-sm) {
+					width: 60%;	
+				}
+			}
+		}
+
+	}
+
+	#en-bas {
+		background-color: $black;
+		color: white;
+	}
+
+	#en-haut {
+		.content {
+			@include mappy-bp(screen-sm) {
+				flex-direction: row-reverse;	
+			}
+		}
+	}
+
+	#equipements,
+	#tarifs {
+		padding: 2em;
+
+		@include mappy-bp(screen-md) {
+			padding: 4em;	
+		}
+
+		@include mappy-bp(screen-xl) {
+			padding: 4em 6em;	
+		}
+
+		h2,
+		> div {
+			max-width: 550px;
+			margin: auto;
+		}
+
+		h2 {
+			margin: 0 auto 1em;
+		}
+	}
+
+	.more-info {
+		@include mappy-bp(screen-sm) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;	
+		}
+	}
+
+	#equipements,
+	#tarifs {
+		@include mappy-bp(screen-sm) {
+			width: 50%;	
+		}
+	}
+
+	#equipements {
+		background-color: $black;
+		color: white;
+
+		::marker,
+		h2 {
+			color: white;
+		}
+
+		ul {
+			margin-left: 1em;
+		}
+	}
+
+	#reservations {
+		header {
+			margin: 0 0 2em;
 
 			@include mappy-bp(screen-sm) {
-				position: absolute;
-				width: 100%;
-				top: 0;
-				left: 0;
-				z-index: 10;
-				margin: 1.5em 0 0;
-				text-align: left;
-				padding: 0;
+				text-align: center;	
 			}
 
-			.inner {
-				@include container();
+			@include mappy-bp(screen-md) {
+				margin-bottom: 4em;	
+			}
+
+			> div {
+				@include mappy-bp(screen-sm) {
+					width: 90%;
+					max-width: 700px;
+					margin: 0 auto;	
+				}
+			}
+
+		}
+
+		.temp {
+			font-style: italic;
+			text-align: center;
+			margin: 0;
+		}
+	}
+
+	#contact {
+		background-color: $black;
+		color: white;
+		position: relative;
+
+		@include mappy-bp(screen-sm) {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		.content {
+			padding: 2em 5%;
+
+			@include mappy-bp(screen-sm) {
+				width: 60%;	
+				margin-left: 40%;
+			}
+
+			@include mappy-bp(screen-md) {
+				padding: 4em 5%;	
+			}
+
+			@include mappy-bp(screen-lg) {
+				padding: 4em 10%;	
 			}
 		}
-	}*/
+
+		h2 {
+			color: white;
+		}
+
+		figure {
+
+			@include mappy-bp(screen-sm) {
+				width: 40%;	
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.intro {
+			margin: 0 0 2em;
+		}
+
+		form {
+			.type-selector {
+				> div {
+					display: flex;
+					align-items: center;
+
+					label {
+						margin-left: 10px;
+					}
+
+					input {
+						accent-color: white;	
+					}
+				}
+			}
+
+			.add-entry-button {
+				background-color: white;
+				color: $black;
+				text-transform: uppercase;
+				font-weight: 900;
+				font-family: $f-title;
+			}
+
+			.your-reservation {
+				border: 1px solid white;
+				padding: 1em;
+				display: none;
+
+				&.active {
+					display: block;
+				}
+
+				> div {
+					margin: 0 0 1em;
+
+					label {
+						margin: 0 0 1em;
+					}
+				}
+			}
+
+			.group-composition {
+				p {
+					margin: 0 0 1em;
+				}
+
+				> div {
+					display: flex;
+					align-items: center;
+
+					input {
+						width: 55px;
+					}
+
+					label {
+						margin: 0 0 0 10px;
+					}
+				}
+			}
+
+			textarea {
+				height: 200px;
+			}
+
+			.wait {
+				margin: 2em 0;
+				padding: 1em;
+				text-align: center;
+				border: 1px solid white;
+
+				display: none;
+			}
+		}
+	}
 
 }

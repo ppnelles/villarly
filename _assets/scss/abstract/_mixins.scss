@@ -25,6 +25,10 @@
 	width: 90%;
 	max-width: 1800px;
 	margin: 0 auto;
+
+	@include mappy-bp(screen-xl) {
+		width: 85%;	
+	}
 }
 
 @mixin reset-list() {

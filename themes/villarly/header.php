@@ -29,6 +29,8 @@ endif; ?>
 
 	<?php get_template_part( 'template-parts/google', 'head' ); ?>
 
+	<link rel="stylesheet" href="https://use.typekit.net/pdt2skf.css">
+
 	<?php wp_head(); ?>
 	<?php get_template_part('/template-parts/content', 'favicons' ); ?>	
 </head>
@@ -38,7 +40,7 @@ endif; ?>
 	<?php get_template_part( 'template-parts/google', 'body' ); ?>
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', '_turbo' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+<header id="masthead" class="site-header" role="banner">
 		<div class="inner">
 			<div class="site-branding">
 				<?php
@@ -62,21 +64,16 @@ endif; ?>
 				</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
+
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
 					<span class="label"><?php esc_html_e( 'Primary Menu', '_turbo' ); ?></span>
-					<span class="burger-line"></span>
-					<span class="burger-line"></span>
-					<span class="burger-line"></span>
 				</button>
 				<div class="nav-inner">
 					<div class="primary-menu">
 						<?php wp_nav_menu( array( 'theme_location' => 'Primary') ); ?>
-					</div>
-					<div class="secondary-menu">
-						<?php wp_nav_menu( array( 'theme_location' => 'Secondary') ); ?>
-						<?php /* <div>
-							<?php do_action('wpml_add_language_selector'); ?>
-						</div> */ ?>
 					</div>
 				</div>
 			</nav><!-- #site-navigation -->
