@@ -257,6 +257,10 @@
 				height: 300px;
 				object-fit: contain;
 			}
+
+			.owl-stage {
+				max-height: 300px;
+			}
 		}
 
 		.owl-nav {
