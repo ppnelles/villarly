@@ -56,6 +56,18 @@ get_header();
 	    		<?php } ?>
 	    		<div><?php the_field( 'bas_content' ); ?></div>
 	    	</div>
+			<div class="photo-gallery">
+				<?php if ( have_rows( 'bas_gal' ) ) : ?>
+						<?php while ( have_rows( 'bas_gal' ) ) : the_row(); ?>
+							<?php //ACF field must be set as ID
+							if(get_sub_field('photo')) { ?>
+								<a href="<?php echo wp_get_attachment_url(get_sub_field( 'photo' )); ?>" data-lightbox="enbas" data-title="Villarly EN BAS">
+									<?php echo wp_get_attachment_image(get_sub_field('photo'), 'large', '', array('class' => 'no-lazyload'));?>
+								</a>
+							<?php } ?>
+						<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
     	</div>
     </section>
 
@@ -70,6 +82,18 @@ get_header();
 	    		<?php } ?>
 	    		<div><?php the_field( 'haut_content' ); ?></div>
 	    	</div>
+			<div class="photo-gallery">
+				<?php if ( have_rows( 'haut_gal' ) ) : ?>
+						<?php while ( have_rows( 'haut_gal' ) ) : the_row(); ?>
+							<?php //ACF field must be set as ID
+							if(get_sub_field('photo')) { ?>
+								<a href="<?php echo wp_get_attachment_url(get_sub_field( 'photo' )); ?>" data-lightbox="enhaut" data-title="Villarly EN HAUT">
+									<?php echo wp_get_attachment_image(get_sub_field('photo'), 'large', '', array('class' => 'no-lazyload'));?>
+								</a>
+							<?php } ?>
+						<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
     	</div>
     </section>
 
@@ -100,7 +124,7 @@ get_header();
     		<div class="intro"><?php the_field( 'con_intro' ); ?></div>
 
 			<div id="form-saved">
-				<?php the_field( 'form_saved' ); ?>
+				<p>Votre demande a bien été envoyée.<br>Nous vous répondrons dans les meilleurs délais.<br>Merci !</p>
 			</div>
 
 			<form id="add-entry-form" 
@@ -140,8 +164,8 @@ get_header();
 	            		<label for="staylength">Durée du séjour:</label>
 	            		<select name="staylength" id="staylength" required>
 	            			<option>Sélectionner...</option>
-	            			<option value="four-days">4 jours</option>
-	            			<option value="a-week">7 jours</option>
+	            			<option value="4 jours">4 jours</option>
+	            			<option value="7 jours">7 jours</option>
 	            		</select>
 	            	</div>
 	            	<div class="group-composition">

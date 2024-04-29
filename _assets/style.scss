@@ -14,7 +14,8 @@ Text Domain: _turbo
 
 @import "./scss/vendors/breakpoints";
 @import "./scss/vendors/normalize"; 
-//@import "./scss/vendors/owlcarousel"; 
+@import "./scss/vendors/lightbox"; 
+@import "./scss/vendors/owlcarousel"; 
 //@import "./scss/vendors/aos/aos"; 
 //@import "./scss/vendors/wpml/legacy-dropdown"; 
 //@import "./scss/vendors/wpml/legacy-dropdown-click"; 
@@ -38,7 +39,7 @@ Text Domain: _turbo
 //@import "./scss/layout/sidebars";
 @import "./scss/layout/sticky-navigation";
 
-//@import "./scss/modules/owlcarousel";
+@import "./scss/modules/owlcarousel";
 //@import "./scss/modules/popup";
 
 @import "./scss/modules/cookiebanner";
