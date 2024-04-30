@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
 
 	jQuery(".photo-gallery").owlCarousel({
-		loop: true,
+		loop: false,
 		nav: true,
 		dots: false,
 		autoplay: false,
@@ -63,14 +63,14 @@ jQuery(".menu-anchor a").click(function() {
 });
 
 jQuery(".check-reservation").click(function() {
-    event.preventDefault();
+    //event.preventDefault();
     jQuery("#check-reservation").prop( "checked", true );
     jQuery("#check-message").prop( "checked", false );
     jQuery('.form-field.your-reservation').addClass('active');
 });
 
 jQuery(".check-message").click(function() {
-    event.preventDefault();
+    //event.preventDefault();
     jQuery("#check-reservation").prop( "checked", false );
     jQuery("#check-message").prop( "checked", true );
     jQuery('.form-field.your-reservation').removeClass('active');

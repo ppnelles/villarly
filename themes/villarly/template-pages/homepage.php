@@ -135,7 +135,7 @@ get_header();
 			        >
 	            <input type="hidden" class="form-action" name="action" value="add_ajax_entry_form">
 	            <div class="form-field">
-	                <input required type="text" name="name" id="name" placeholder="Votre nom & prénom">
+	                <input required type="text" name="name" id="name" placeholder="Votre prénom & nom">
 	            </div>
 	            <div class="form-field">
 	                <input required type="email" name="email" id="email" placeholder="Votre adresse email">
