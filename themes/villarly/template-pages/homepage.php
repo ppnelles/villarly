@@ -114,7 +114,7 @@ get_header();
     			<h2><?php the_field( 'res_title' ); ?></h2>
     			<div><?php the_field( 'res_content' ); ?></div>
     		</header>
-    		<p class="temp">En cours de dev =)</p>
+    		<div class="calendar-container"><?php echo do_shortcode('[calendar id="123"]'); ?></div>
     	</div>
     </section>
 

@@ -419,10 +419,111 @@
 
 		}
 
-		.temp {
-			font-style: italic;
-			text-align: center;
-			margin: 0;
+		.calendar-container {
+			overflow: auto;
+
+			@include mappy-bp(screen-lg) {
+				margin: 0 5%;
+			}
+		}
+
+		.simcal-calendar {
+
+			.simcal-prev,
+			.simcal-next {
+				padding: 0;
+				width: 40px;
+				height: 40px;
+				border-radius: 40px;
+				background-color: #fff;
+				border: 1px solid black;
+				position: relative;
+
+				&:after {
+					content: '>';
+					display: block;
+					width: 40px;
+					line-height: 40px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: black;
+				}
+
+				&:disabled {
+					opacity: 0;
+				}
+			}
+
+			.simcal-prev:after {
+				content: '<';
+			}
+
+			.simcal-next:after {
+				content: '>';
+			}
+
+			.simcal-next-wrapper {
+				text-align: right;
+			}
+
+			.simcal-prev-wrapper {
+				text-align: left;
+			}
+
+			th.simcal-nav {
+				border: none;
+			}
+
+			th.simcal-current {
+				h3 {
+					text-align: center;
+					font-weight: 300;
+					text-transform: uppercase;
+					margin: 0;
+				}
+			}
+
+			.simcal-day {
+				background-color: #f2f0f3;
+				border: 10px solid white;
+				padding: 0;
+
+				> div {
+					padding: 10px;
+				}
+
+			}
+
+			.simcal-day-label {
+				text-align: right;
+			}
+
+			.simcal-event-title {
+				font-size: 65%;
+			}
+			
+			.simcal-calendar-head {
+
+				th.simcal-week-day {
+					border: 10px solid white;
+					background-color: black;
+					color: white;
+					text-align: center;
+					text-transform: uppercase;
+					font-weight: 300;
+				}
+			}
+
+			.simcal-day-void {
+				background-color: #fff;
+			}
+
+			.simcal-events {
+				padding: 0 0 0 20px;
+				margin: 0;
+			}
+
 		}
 	}
 

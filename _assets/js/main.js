@@ -25,6 +25,8 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
+	jQuery('.simcal-month-nav').removeAttr("disabled");
+
 	if (location.hash) location.href = location.hash;
 
 	if (jQuery.cookie('hidecookie') != "hidden" ) {
