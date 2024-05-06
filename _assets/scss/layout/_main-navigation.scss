@@ -83,6 +83,7 @@
 		}
 	}
 
+
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
@@ -246,6 +247,16 @@ a.single-lang-switch {
 					color: white;
 				}
 			}
+		}
+	}
+
+	ul li.appart {
+		a {
+			font-size: 130%;
+
+			@include mappy-bp(screen-sm) {
+				font-size: 200%;			
+			}		
 		}
 	}
 

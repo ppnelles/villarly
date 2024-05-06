@@ -44,58 +44,80 @@ get_header();
     </section>
 
     <h2 id="appartements"><?php the_field( 'app_title' ); ?></h2>
-
-    <section id="en-bas">
-    	<div class="inner">
-	    	<div class="content">
-	    		<?php //ACF field must be set as ID
-	    		if(get_field('bas_logo')) { ?>
-	    			<figure>
-	    				<?php echo wp_get_attachment_image(get_field('bas_logo'), 'full'); ?>
-	    			</figure>
-	    		<?php } ?>
-	    		<div><?php the_field( 'bas_content' ); ?></div>
+    
+    <div class="appartements-container">
+	    <section id="en-bas">
+	    	<div class="inner">
+		    	<div class="content">
+		    		<?php //ACF field must be set as ID
+		    		if(get_field('bas_logo')) { ?>
+		    			<figure>
+		    				<?php echo wp_get_attachment_image(get_field('bas_logo'), 'full'); ?>
+		    			</figure>
+		    		<?php } ?>
+		    		<div><?php the_field( 'bas_content' ); ?></div>
+		    	</div>
 	    	</div>
-			<div class="photo-gallery">
-				<?php if ( have_rows( 'bas_gal' ) ) : ?>
-						<?php while ( have_rows( 'bas_gal' ) ) : the_row(); ?>
-							<?php //ACF field must be set as ID
-							if(get_sub_field('photo')) { ?>
-								<a href="<?php echo wp_get_attachment_url(get_sub_field( 'photo' )); ?>" data-lightbox="enbas" data-title="Villarly EN BAS">
-									<?php echo wp_get_attachment_image(get_sub_field('photo'), 'large', '', array('class' => 'no-lazyload'));?>
-								</a>
-							<?php } ?>
-						<?php endwhile; ?>
-				<?php endif; ?>
-			</div>
+	    </section>
+
+	    <section id="en-haut">
+	    	<div class="inner">
+		    	<div class="content">
+		    		<?php //ACF field must be set as ID
+		    		if(get_field('haut_logo')) { ?>
+		    			<figure>
+		    				<?php echo wp_get_attachment_image(get_field('haut_logo'), 'full'); ?>
+		    			</figure>
+		    		<?php } ?>
+		    		<div><?php the_field( 'haut_content' ); ?></div>
+		    	</div>
+	    	</div>
+	    </section>
+    	
+    </div>
+
+    <section id="galleries">
+    	<div class="inner">
+    		<h2>Galeries photos</h2>
+    		<div class="enbas-gal">
+	        	<figure class="app-logo">
+	        		<img src="<?php bloginfo('template_directory'); ?>/img/villarly-b-noir.svg" alt="Villarly en Bas">
+	        	</figure>
+				<div class="photo-gallery">
+					<?php if ( have_rows( 'bas_gal' ) ) : ?>
+							<?php while ( have_rows( 'bas_gal' ) ) : the_row(); ?>
+								<?php
+								if(get_sub_field('photo')) { ?>
+									<a href="<?php echo wp_get_attachment_url(get_sub_field( 'photo' )); ?>" data-lightbox="enbas" data-title="Villarly EN BAS">
+										<?php echo wp_get_attachment_image(get_sub_field('photo'), 'large', '', array('class' => 'no-lazyload'));?>
+									</a>
+								<?php } ?>
+							<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
+    		</div>
+    		<div class="enhaut-gal">
+	        	<figure class="app-logo">
+	        		<img src="<?php bloginfo('template_directory'); ?>/img/villarly-h-noir.svg" alt="Villarly en Haut">
+	        	</figure>
+				<div class="photo-gallery">
+					<?php if ( have_rows( 'haut_gal' ) ) : ?>
+							<?php while ( have_rows( 'haut_gal' ) ) : the_row(); ?>
+								<?php 
+								if(get_sub_field('photo')) { ?>
+									<a href="<?php echo wp_get_attachment_url(get_sub_field( 'photo' )); ?>" data-lightbox="enhaut" data-title="Villarly EN HAUT">
+										<?php echo wp_get_attachment_image(get_sub_field('photo'), 'large', '', array('class' => 'no-lazyload'));?>
+									</a>
+								<?php } ?>
+							<?php endwhile; ?>
+					<?php endif; ?>
+				</div>
+    		</div>
     	</div>
+    	
     </section>
 
-    <section id="en-haut">
-    	<div class="inner">
-	    	<div class="content">
-	    		<?php //ACF field must be set as ID
-	    		if(get_field('haut_logo')) { ?>
-	    			<figure>
-	    				<?php echo wp_get_attachment_image(get_field('haut_logo'), 'full'); ?>
-	    			</figure>
-	    		<?php } ?>
-	    		<div><?php the_field( 'haut_content' ); ?></div>
-	    	</div>
-			<div class="photo-gallery">
-				<?php if ( have_rows( 'haut_gal' ) ) : ?>
-						<?php while ( have_rows( 'haut_gal' ) ) : the_row(); ?>
-							<?php //ACF field must be set as ID
-							if(get_sub_field('photo')) { ?>
-								<a href="<?php echo wp_get_attachment_url(get_sub_field( 'photo' )); ?>" data-lightbox="enhaut" data-title="Villarly EN HAUT">
-									<?php echo wp_get_attachment_image(get_sub_field('photo'), 'large', '', array('class' => 'no-lazyload'));?>
-								</a>
-							<?php } ?>
-						<?php endwhile; ?>
-				<?php endif; ?>
-			</div>
-    	</div>
-    </section>
+
 
     <div class="more-info">
     	<section id="equipements">

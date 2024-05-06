@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 		    },
 		    768 : {
     				autoWidth: true,
-    				margin: 20,
+    				margin: 10,
 		        items: 2,
 		    },
 		    992 : {

@@ -208,11 +208,26 @@
 		color: white;
 		margin: 0;
 		padding: 2em 0 0;
+
+		@include mappy-bp(screen-md) {
+			background-color: #fff;
+			color: $black;	
+			margin: 0 0 2em;
+		}
+	}
+
+	.appartements-container {
+		@include mappy-bp(screen-md) {
+			display: flex;
+			flex-wrap: wrap;	
+		}
 	}
 
 	#en-haut,
 	#en-bas {
-		.inner {
+
+		@include mappy-bp(screen-md) {
+			width: 50%;	
 		}
 
 		.content {
@@ -223,6 +238,7 @@
 				justify-content: space-around;	
 			}
 
+
 			figure {
 				width: 60%;
 				margin: 0 auto 2em;
@@ -231,86 +247,18 @@
 					width: 30%;
 				}
 
-				@include mappy-bp(screen-xl) {
-					width: 25%;	
+				@include mappy-bp(screen-md) {
+					width: 60%;	
 				}
 			}
 
 			> div {
 				@include mappy-bp(screen-sm) {
-					width: 60%;	
-				}
-			}
-		}
-
-		.photo-gallery {
-			position: relative;
-			width: 80%;
-			margin: 0 auto;
-
-			@include mappy-bp(screen-md) {
-				width: 85%;	
-			}
-
-			@include mappy-bp(screen-lg) {
-				width: 90%;	
-			}
-
-			@include mappy-bp(screen-xl) {
-				width: 100%;	
-			}
-
-			a {
-				display: block;
-				text-align: center;
-			}
-
-			img {
-				display: inline-block;
-				width: auto;
-				height: 300px;
-				object-fit: contain;
-			}
-
-			.owl-stage {
-				max-height: 300px;
-			}
-		}
-
-		.owl-nav {
-
-			button {
-				position: absolute;
-				bottom: calc(50% - 20px);
-				background-color: transparent;
-				color: white;
-				border: 1px solid white;
-				line-height: 40px;
-				padding: 0;
-				width: 40px;
-				height: 40px;
-				border-radius: 40px;
-
-				&.owl-prev {
-					left: -60px;
+					width: 50%;	
 				}
 
-				&.owl-next {
-					right: -60px;	
-				}
-
-				&.disabled {
-					cursor: default;
-					opacity: 0.2;
-					color: white;
-					border-color: white;
-				}
-
-				span {
-					font-size: 190%;
-					font-weight: 300;
-					position: relative;
-					top: -3px;
+				@include mappy-bp(screen-md) {
+					width: 100%;	
 				}
 			}
 		}
@@ -320,12 +268,30 @@
 	#en-bas {
 		background-color: $black;
 		color: white;
+
+		.content {
+			@include mappy-bp(screen-md) {
+				flex-direction: column-reverse;	
+			}
+	
+			figure {
+				@include mappy-bp(screen-md) {
+					margin: 2em 0 0;	
+				}
+			}
+		}
+
+
 	}
 
 	#en-haut {
 		.content {
 			@include mappy-bp(screen-sm) {
 				flex-direction: row-reverse;	
+			}
+
+			@include mappy-bp(screen-md) {
+				flex-direction: column;	
 			}
 		}
 
@@ -343,6 +309,142 @@
 			}
 		}
 
+	}
+
+	#galleries {
+
+		.inner {
+			width: 95%;
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		.enbas-gal,
+		.enhaut-gal {
+
+			@include mappy-bp(screen-sm) {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: space-between;
+			}
+		}
+
+		.enbas-gal {
+			margin: 0 0 2em;
+
+			@include mappy-bp(screen-lg) {
+				margin: 0 0 4em;	
+			}
+		}
+
+		.enbas-gal {
+			@include mappy-bp(screen-sm) {
+				flex-direction: row-reverse;	
+			}
+		}
+
+		.app-logo {
+			width: 50%;
+			margin: 3em auto;
+			padding: 0 2em;
+
+			@include mappy-bp(screen-sm) {
+				width: 20%;
+				margin: 0;
+			}
+		}
+
+		.photo-gallery {
+			position: relative;
+			padding: 0;
+			width: 60%;
+			margin: 0 auto;
+
+			@include mappy-bp(screen-md) {
+				width: 70%;	
+			}
+
+			// @include mappy-bp(screen-lg) {
+			// 	width: 90%;	
+			// }
+
+			// @include mappy-bp(screen-xl) {
+			// 	width: 100%;	
+			// }
+
+			a {
+				display: block;
+				text-align: center;
+			}
+
+			img {
+				display: inline-block;
+				width: auto;
+				height: 300px;
+				object-fit: contain;
+			}
+
+			.owl-stage {
+				max-height: 300px;
+			}
+
+			.owl-stage-outer {
+				position: relative;
+
+				&:after {
+					content: '';
+					display: block;
+					width: 5px;
+					height: 100%;
+					position: absolute;
+					top: 0;
+					right: 0;
+					background-color: #fff;
+				}
+			}
+		}
+
+		.owl-nav {
+
+			button {
+				position: absolute;
+				bottom: calc(50% - 20px);
+				background-color: transparent;
+				color: $black;
+				border: 1px solid $black;
+				padding: 0;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 30px;
+
+
+				&.owl-prev {
+					left: -60px;
+				}
+
+				&.owl-next {
+					right: -60px;	
+				}
+
+				&.disabled {
+					cursor: default;
+					opacity: 0.2;
+					color: white;
+					border-color: $black;
+				}
+
+				span {
+					font-size: 190%;
+					font-weight: 300;
+					position: relative;
+					top: -3px;
+				}
+			}
+		}
 	}
 
 	#equipements,
@@ -372,7 +474,7 @@
 		@include mappy-bp(screen-sm) {
 			display: flex;
 			flex-wrap: wrap;
-			align-items: flex-start;	
+			align-items: center;	
 		}
 	}
 
@@ -531,6 +633,10 @@
 		background-color: $black;
 		color: white;
 		position: relative;
+
+		a {
+			color: white;
+		}
 
 		@include mappy-bp(screen-sm) {
 			display: flex;
