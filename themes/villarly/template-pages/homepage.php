@@ -78,7 +78,7 @@ get_header();
 
     <section id="galleries">
     	<div class="inner">
-    		<h2>Galeries photos</h2>
+    		<h2><?php the_field( 'gal_title' ); ?></h2>
     		<div class="enbas-gal">
 	        	<figure class="app-logo">
 	        		<img src="<?php bloginfo('template_directory'); ?>/img/villarly-b-noir.svg" alt="Villarly en Bas">
