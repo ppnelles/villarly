@@ -53,12 +53,6 @@ function add_ajax_entry_form() {
     if($insertEntry == 1){
       $succes['validate'] = true;
 
-      if(ENV_STATUS == 'dev') {
-        $from = "paul-philippe@getin.agency";
-      }
-      else {
-        $from = "benjamin@getin.agency, annedestefano0509@gmail.com";
-      }
       $headers = array('Content-Type: text/html; charset=UTF-8');
 
       if($_REQUEST['message_type'] == 'reservation') {
@@ -93,7 +87,7 @@ function add_ajax_entry_form() {
       <?php $content = ob_get_contents();
       ob_end_clean();
 
-      $email_sent = wp_mail('paul-philippe@getin.agency', $title, $content, $headers);
+      $email_sent = wp_mail('benjamin@getin.agency, annedestefano0509@gmail.com', $title, $content, $headers);
 
       wp_send_json_success( $succes );
 
