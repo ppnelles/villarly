@@ -35,6 +35,7 @@ function my_custom_fonts() {
     #toplevel_page_members,
     #toplevel_page_smush,
     #toplevel_page_theme-general-settings,
+    #toplevel_page_wpseo_workouts,
     #menu-settings {
       display: none;
     } 
