@@ -53,11 +53,11 @@ function add_ajax_entry_form() {
     if($insertEntry == 1){
       $succes['validate'] = true;
 
-      if(ENV == 'dev') {
+      if(ENV_STATUS == 'dev') {
         $from = "paul-philippe@getin.agency";
       }
       else {
-        $from = "benjamin@getin.agency,annedestefano0509@gmail.com";
+        $from = "benjamin@getin.agency, annedestefano0509@gmail.com";
       }
       $headers = array('Content-Type: text/html; charset=UTF-8');
 
