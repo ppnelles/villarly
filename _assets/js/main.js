@@ -62,6 +62,8 @@ jQuery(".menu-anchor a").click(function() {
     jQuery([document.documentElement, document.body]).animate({
         scrollTop: jQuery(menuItem).offset().top
     }, 500).delay(200);
+    
+    jQuery('body').removeClass('menu-open');
 });
 
 jQuery(".check-reservation").click(function() {

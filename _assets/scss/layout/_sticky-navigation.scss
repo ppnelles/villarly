@@ -39,9 +39,9 @@ body {
 	&.menu-open {
 		overflow: hidden;
 
-		@include mappy-bp(screen-md) {
-			overflow: auto;	
-		}
+		// @include mappy-bp(screen-md) {
+		// 	overflow: auto;	
+		// }
 
 		.nav-inner {
 			max-height: 100vh;
